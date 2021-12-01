@@ -1,0 +1,5 @@
+module github.com/func25/proto-tag-func
+
+go 1.17
+
+require google.golang.org/protobuf v1.27.1
