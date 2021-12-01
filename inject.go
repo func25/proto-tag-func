@@ -144,6 +144,10 @@ func injectTags(path string, tagInfos []TagInfo) error {
 		return err
 	}
 
+	if len(tagInfos) == 0 {
+		return nil
+	}
+
 	var newF []byte
 	for i := len(tagInfos) - 1; i >= 0; i-- {
 		newF = []byte{}

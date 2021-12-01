@@ -27,7 +27,7 @@ type Message struct {
 
 	UserId    string `protobuf:"bytes,1,opt,name=userId,proto3" json:"userId,omitempty"`
 	BoxId     int32  `protobuf:"varint,2,opt,name=boxId,proto3" json:"boxId,omitempty"`
-	ErrorMsg  string `protobuf:"bytes,12,opt,name=errorMsg,proto3" json:"errorMsg,omitempty"`
+	ErrorMsg  string `json:"errMsgha" bson:"errMsgho" protobuf:"bytes,12,opt,name=errorMsg,proto3"` // #json: "errMsgha" #bson: "errMsgho"
 	ErrorCode int32  `protobuf:"varint,13,opt,name=errorCode,proto3" json:"errorCode,omitempty"`
 	Timestamp int64  `protobuf:"varint,14,opt,name=timestamp,proto3" json:"timestamp,omitempty"`
 }

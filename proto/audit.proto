@@ -8,7 +8,7 @@ option go_package ="./proto/auditproto";
 message Message {
   string userId = 1;
   int32 boxId = 2;
-  string errorMsg = 12;
+  string errorMsg = 12; // #json: "errMsgha" #bson: "errMsgho"
   int32 errorCode = 13;
   int64 timestamp = 14;
 }
