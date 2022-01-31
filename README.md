@@ -1,6 +1,6 @@
-# proto-tag-func
+# proto-tag-func: inject custom struct tag to proto field
 
-Step 1: add inject tags that suit your need by adding a comment line, ex: // #json: "..."
+###Step 1: add inject tags that suit your need by adding a comment line, ex: // #json: "..."
 
 ```go
 message Message {
@@ -12,9 +12,9 @@ message Message {
 }
 ```
 
-Step 2: generate .go file (use protoc compiler binary file of gg), in my example: ```protoc --go_out=. ./test/taginject/*.proto```
+###Step 2: generate .go file (use protoc compiler of gg), in my example: ```protoc --go_out=. ./test/taginject/*.proto```
 
-Step 3: run the proto-tag-func binary command, if you follow my demo: ```./proto-tag-func --input="./proto/auditproto/*"```
+###Step 3: run the proto-tag-func binary command, if you follow my demo: ```./proto-tag-func --input="./proto/auditproto/*"```
 
 ```go
 type Message struct {
